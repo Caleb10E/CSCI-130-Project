@@ -26,3 +26,36 @@
 #menu .active {
     background-color: green;
 }
+
+/*
+#Financials {
+   border-collapse: collapse;
+   font-style: italic;
+}
+
+#Financials caption {
+   font-weight: bold;
+   padding-bottom: 10px;
+}
+
+
+#Financials td {
+   border: 1px solid black;
+   padding: 15px;
+}
+
+#Financials th{
+  padding: 15px;
+  text-transform: capitalize;
+}
+
+#Financials tr:hover {
+  background-color: blue;
+  color: white;
+}
+
+
+#Financials td:hover {
+  background-color: red;
+}
+*/
