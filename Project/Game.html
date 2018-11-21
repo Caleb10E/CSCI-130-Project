@@ -3,16 +3,13 @@
 <head>
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <title>Picross Game</title>
 </head>
-
-
 <body>
-
-
 <nav id="menu">
   <ul>
-    <li><a href="index.html">Main</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="About.html">How to Play</a></li>
     <li class="active"><a href="Game.html">Play the Game</a></li>
     <li><a href="Author.html">Authors</a></li>
@@ -22,13 +19,36 @@
 <br><br><br><br><br>
 
 <section id="Game">
+
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+        $("form").remove(".parameters");
+    });
+  });
+  </script>
 <script src="script.js"></script>
 
-<table id="myTable" border="1">
-</table><form>
-<input type="button" onclick="createTable()" value="Create the table">
-</form>
 
+<table id="myTable" border="1"></table>
+<form class = "parameters">
+  <fieldset>
+    <p>Please Select a Table Size</p>
+<input type="radio" name="tableSize" value="7" checked>7x7<br>
+<input type="radio" name="tableSize" value="13">13x13<br>
+    <p>Please Select a grid color</p>
+<input type="radio" name="gridColor" value="Red" checked>Red<br>
+<input type="radio" name="gridColor" value="Green">Green<br>
+<input type="radio" name="gridColor" value="Blue">Blue<br>
+    <p>Please Select a block color</p>
+<input type="radio" name="blockColor" value="Red" checked>Red<br>
+<input type="radio" name="blockColor" value="Green">Green<br>
+<input type="radio" name="blockColor" value="Blue">Blue<br>
+<br>
+<input type="button" value="Create Table" onclick="createTable(tableSize, gridColor, blockColor)">
+<br><br>
+</fieldset>
+</form>
 </section>
 </body>
 </html>
