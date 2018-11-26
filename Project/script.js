@@ -1,3 +1,4 @@
+
 function createTable(tableSize, gridColor, blockColor)
 {
  for(var r = 0; r < parseInt(tableSize.value,10); r++)
