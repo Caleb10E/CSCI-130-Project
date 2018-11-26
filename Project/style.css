@@ -26,11 +26,3 @@
 #menu .active {
     background-color: green;
 }
-
- #minutes label {
-  display: block;
-  padding: 15px;
-  margin: 30px;
-  border-radius: 15px;
-  color: blue
-}
