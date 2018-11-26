@@ -18,9 +18,11 @@
 <br><br><br><br><br>
 
 <section id="Game">
+  <div class="timer">
   <label id="minutes">00</label>:<label id="seconds">00</label>
+</div>
   <script type="text/javascript">
-  var minutesLabel = document.getElementById("minutes");
+var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
 setInterval(setTime, 1000);
@@ -42,7 +44,8 @@ if (valString.length < 2) {
   </script>
 <script src="script.js"></script>
 <table id="myTable" border="1"></table>
-<form class = "parameters">
+
+<form id = "parameters">
   <fieldset>
     <p>Please Select a Table Size</p>
 <input type="radio" name="tableSize" value="7" checked>7x7<br>
@@ -56,10 +59,21 @@ if (valString.length < 2) {
 <input type="radio" name="blockColor" value="Green">Green<br>
 <input type="radio" name="blockColor" value="Blue">Blue<br>
 <br>
-<input type="button" value="Create Table" onclick="createTable(tableSize, gridColor, blockColor)">
+<input type="button" onclick="createTable(tableSize, gridColor, blockColor); removeForm();" value="Create Table">
 <br><br>
 </fieldset>
 </form>
+
+<script type="text/javascript">
+function removeForm(){
+  var x = document.getElementById("parameters");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
 </section>
 </body>
 </html>
