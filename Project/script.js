@@ -7,7 +7,7 @@ function createTable(tableSize, gridColor, blockColor)
    for(var c = 0; c < parseInt(tableSize.value,10); c++)
     {
      var y = x.insertCell(c);
-     y.innerHTML="Row-"+ r +" Column-"+ c;
+     y.innerHTML= r + c;
     }
    }
 }
