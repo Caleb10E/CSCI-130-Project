@@ -39,26 +39,31 @@
   background-color: lightgrey;
   text-align: center;
   border-radius: 10px;
+ font-family: "Courier New", Courier, monospace
 }
 
 #Learn {
   text-align: center;
   background-color: white;
+   font-family: "Courier New", Courier, monospace
 }
 
 #Game {
   text-align: center;
   border-radius: 10px;
+   font-family: "Courier New", Courier, monospace
 }
 
 #Play {
   text-align: center;
   border-radius: 10px;
   background-color: lightgrey;
+   font-family: "Courier New", Courier, monospace
 }
 
 #Authors {
   text-align: center;
+   font-family: "Courier New", Courier, monospace
 }
 
 .red {
@@ -126,4 +131,12 @@ a:active {
 
 #parameters {
 background-color: lightgrey;
+}
+
+p {
+   font-family: "Courier New", Courier, monospace
+}
+
+h1 {
+   font-family: "Courier New", Courier, monospace
 }
