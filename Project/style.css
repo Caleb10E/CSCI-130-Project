@@ -1,3 +1,67 @@
+p {
+  font-family: "Courier New", Courier, monospace
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace
+}
+
+h3 {
+  font-family: "Courier New", Courier, monospace
+}
+
+a {
+  color: black;
+}
+
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.About {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.Board {
+  border:1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  padding: 15px 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
 #menu ul {
   list-style-type: none;
   margin: auto;
@@ -32,7 +96,7 @@
 }
 
 #menu .active {
-  background-color: green;
+  background-color: #2C8F40;
 }
 
 #info {
@@ -66,44 +130,6 @@
   font-family: "Courier New", Courier, monospace
 }
 
-.red {
-  background-color: red;
-}
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 10px;
-}
-
-a {
-  color: black;
-}
-
-
-a:link {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-  color: white;
-}
-
-a:active {
-  text-decoration: none;
-}
-
 #duck {
   width:250px;
   height:250px;
@@ -115,32 +141,6 @@ a:active {
   border-radius: 10px;
 }
 
-.About {
-  text-align: center;
-  border-radius: 10px;
-}
-
-.Board {
-  border:1px solid black;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  background-color: white;
-  padding: 15px 0;
-}
-
 #parameters {
   background-color: lightgrey;
-}
-
-p {
-  font-family: "Courier New", Courier, monospace
-}
-
-h1 {
-  font-family: "Courier New", Courier, monospace
-}
-
-h3 {
-  font-family: "Courier New", Courier, monospace
 }
