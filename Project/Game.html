@@ -1,121 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<link rel="stylesheet" href="style.css?v=4">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<title>Picross Game</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style.css?v=4">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Picross Game</title>
 </head>
 <body>
-<nav id="menu">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="About.html">How to Play</a></li>
-    <li class="active"><a href="Game.html">Play the Game</a></li>
-    <li><a href="Author.html">Authors</a></li>
-  </ul>
-</nav>
-<br><br><br><br><br>
+  <nav id="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">How to Play</a></li>
+      <li class="active"><a href="Game.html">Play the Game</a></li>
+      <li><a href="Author.html">Authors</a></li>
+    </ul>
+  </nav>
+  
+  <br><br><br><br><br>
 
-<section id="Game">
-  <div class="Board">
-  <span>Time: </span><span id="minutes">00</span>:<span id="seconds">00</span>
-  <span>Moves: </span><span id="moves"> 0</span>
-  <span>Errors: </span><span id="erros"> 0</span>
-</div>
-<br><br>
+  <section id="Game">
+    <div class="Board">
+      <span>Time: </span><span id="minutes">00</span>:<span id="seconds">00</span>
+      <span>Moves: </span><span id="moves"> 0</span>
+      <span>Errors: </span><span id="erros"> 0</span>
+    </div>
+    
+    <br><br>
 
-  <script type="text/javascript">
-var minutesLabel = document.getElementById("minutes");
-var secondsLabel = document.getElementById("seconds");
-var totalSeconds = 0;
-setInterval(setTime, 1000);
+    <script type="text/javascript">
+      var minutesLabel = document.getElementById("minutes");
+      var secondsLabel = document.getElementById("seconds");
+      var totalSeconds = 0;
+      setInterval(setTime, 1000);
 
-function setTime() {
-++totalSeconds;
-secondsLabel.innerHTML = pad(totalSeconds % 60);
-minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
-}
-
-function pad(val) {
-var valString = val + "";
-if (valString.length < 2) {
-  return "0" + valString;
-} else {
-  return valString;
-}
-}
-  </script>
-<script src="script.js"></script>
-<table id="myTable" border="1"></table>
-
-<form id = "parameters">
-  <fieldset>
-    <p>Please Select a Table Size</p>
-<input type="radio" name="tableSize" value="7" checked>7x7<br>
-<input type="radio" name="tableSize" value="13">13x13<br>
-    <p>Please Select a grid color</p>
-<input type="radio" name="gridColor" value="Red" checked>Red<br>
-<input type="radio" name="gridColor" value="Green">Green<br>
-<input type="radio" name="gridColor" value="Blue">Blue<br>
-    <p>Please Select a block color</p>
-<input type="radio" name="blockColor" value="Red" checked>Red<br>
-<input type="radio" name="blockColor" value="Green">Green<br>
-<input type="radio" name="blockColor" value="Blue">Blue<br>
-<br>
-<input type="button" class="button" onclick="createTable(tableSize, gridColor, blockColor); removeForm();" value="Create Table">
-<br><br>
-</fieldset>
-</form>
-
-<script type="text/javascript">
-function removeForm(){
-  var x = document.getElementById("parameters");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-
-
-function makeRequest3(url, userName) {
-  var httpRequest;
-  httpRequest = new XMLHttpRequest(); // create the object
-  if (!httpRequest) { // check if the object was properly created
-  // issues with the browser, example: old browser
-    alert('Cannot create an XMLHTTP instance');
-    return false;
-  }
-  httpRequest.onreadystatechange = alertContents3;  // we assign a function to the property onreadystatechange (callback function)
-  httpRequest.open('POST','game.php');  // ACTION + (string containing address of the file + parameters if needed)
-  httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-// application/json; charset=utf-8 is a common Content-Type
-  // application/x-www-form-urlencoded; charset=UTF-8 is the default Content-Type
-  httpRequest.send('userName=' + userName); // POST = send with parameter (the string with the relevant information)
-}
-
-function alertContents3() {
-  try {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-		    // We retrieve a piece of text corresponding to some JSON
-			// now you have a nice object in the response, you can access its properties and values to populate the different fields of your form
-			// the next stages will be about the creation of this JSON from the PHP side, in relation to some data that we extracted from a database
-			alert(httpRequest.responseText); // If you have a bug, use an alert of what is given back from the server (for textual content)
-			// if you return something that cannot be converted to an object, then debug the PHP side !
-			var response = JSON.parse(httpRequest.responseText);
-			alert(response.computedString); // display the value of property computedString from the JSON object
-	  } else {
-        alert('There was a problem with the request.');
+      function setTime() {
+        ++totalSeconds;
+        secondsLabel.innerHTML = pad(totalSeconds % 60);
+        minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
       }
-    }
-  }
-  catch( e ) { // Always deal with what can happen badly, client-server applications --> there is always something that can go wrong on one end of the connection
-    alert('Caught Exception: ' + e.description);
-  }
-}
-</script>
-</section>
+
+      function pad(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+          return "0" + valString;
+        } 
+        else {
+          return valString;
+        }
+      }
+    </script>
+    
+    <script src="script.js"></script>
+    
+    <table id="myTable" border="1"></table>
+    
+    <form id = "parameters">
+      <fieldset>
+        <p>Please Select a Table Size</p>
+        <input type="radio" name="tableSize" value="7" checked>7x7<br>
+        <input type="radio" name="tableSize" value="13">13x13<br>
+        <p>Please Select a grid color</p>
+        <input type="radio" name="gridColor" value="Red" checked>Red<br>
+        <input type="radio" name="gridColor" value="Green">Green<br>
+        <input type="radio" name="gridColor" value="Blue">Blue<br>
+        <p>Please Select a block color</p>
+        <input type="radio" name="blockColor" value="Red" checked>Red<br>
+        <input type="radio" name="blockColor" value="Green">Green<br>
+        <input type="radio" name="blockColor" value="Blue">Blue<br>
+        <br>
+        <input type="button" class="button" onclick="createTable(tableSize, gridColor, blockColor); removeForm();" value="Create Table"><br>
+        <br>
+      </fieldset>
+    </form>
+
+    <script type="text/javascript">
+      function removeForm() {
+        var x = document.getElementById("parameters");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        }
+        else {
+          x.style.display = "none";
+        }
+      }
+      
+      function makeRequest3(url, userName) {
+        var httpRequest;
+        httpRequest = new XMLHttpRequest(); // create the object
+        if (!httpRequest) { // check if the object was properly created
+        // issues with the browser, example: old browser
+          alert('Cannot create an XMLHTTP instance');
+          return false;
+        }
+        httpRequest.onreadystatechange = alertContents3;  // we assign a function to the property onreadystatechange (callback function)
+        httpRequest.open('POST','game.php');  // ACTION + (string containing address of the file + parameters if needed)
+        httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        // application/json; charset=utf-8 is a common Content-Type
+        // application/x-www-form-urlencoded; charset=UTF-8 is the default Content-Type
+        httpRequest.send('userName=' + userName); // POST = send with parameter (the string with the relevant information)
+      }
+
+      function alertContents3() {
+        try {
+          if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+      		    // We retrieve a piece of text corresponding to some JSON
+      			  // now you have a nice object in the response, you can access its properties and values to populate the different fields of your form
+      			  // the next stages will be about the creation of this JSON from the PHP side, in relation to some data that we extracted from a database
+      			  alert(httpRequest.responseText); // If you have a bug, use an alert of what is given back from the server (for textual content)
+      			  // if you return something that cannot be converted to an object, then debug the PHP side !
+      			  var response = JSON.parse(httpRequest.responseText);
+      			  alert(response.computedString); // display the value of property computedString from the JSON object
+      	    }
+            else {
+              alert('There was a problem with the request.');
+            }
+          }
+        }
+        catch( e ) { // Always deal with what can happen badly, client-server applications --> there is always something that can go wrong on one end of the connection
+          alert('Caught Exception: ' + e.description);
+        }
+      }
+    </script>
+  </section>
 </body>
 </html>

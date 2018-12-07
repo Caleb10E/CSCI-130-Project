@@ -1,94 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<link rel="stylesheet" href="style.css?v=2">
-<title>Home</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="style.css?v=2">
+  <title>Home</title>
 </head>
 <body>
-<script type="text/javascript">
-/*
-function makeRequest3() {
-  var httpRequest;
-  httpRequest = new XMLHttpRequest(); // create the object
-  if (!httpRequest) { // check if the object was properly created
-  // issues with the browser, example: old browser
-    alert('Cannot create an XMLHTTP instance');
-    return false;
+  <script type="text/javascript">
+  /*
+  function makeRequest3() {
+    var httpRequest;
+    httpRequest = new XMLHttpRequest(); // create the object
+    if (!httpRequest) { // check if the object was properly created
+    // issues with the browser, example: old browser
+      alert('Cannot create an XMLHTTP instance');
+      return false;
+    }
+    httpRequest.onreadystatechange = alertContents3();  // we assign a function to the property onreadystatechange (callback function)
+    httpRequest.open('POST','db.php');  // ACTION + (string containing address of the file + parameters if needed)
+    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  // application/json; charset=utf-8 is a common Content-Type
+    // application/x-www-form-urlencoded; charset=UTF-8 is the default Content-Type
+    httpRequest.send(); // POST = send with parameter (the string with the relevant information)
   }
-  httpRequest.onreadystatechange = alertContents3();  // we assign a function to the property onreadystatechange (callback function)
-  httpRequest.open('POST','db.php');  // ACTION + (string containing address of the file + parameters if needed)
-  httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-// application/json; charset=utf-8 is a common Content-Type
-  // application/x-www-form-urlencoded; charset=UTF-8 is the default Content-Type
-  httpRequest.send(); // POST = send with parameter (the string with the relevant information)
-}
 
-function alertContents3() {
-  try {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        // We retrieve a piece of text corresponding to some JSON
-      // now you have a nice object in the response, you can access its properties and values to populate the different fields of your form
-      // the next stages will be about the creation of this JSON from the PHP side, in relation to some data that we extracted from a database
-      alert(httpRequest.responseText); // If you have a bug, use an alert of what is given back from the server (for textual content)
-      // if you return something that cannot be converted to an object, then debug the PHP side !
-  //   var response = JSON.parse(httpRequest.responseText);
-    //  alert(response.arra); // display the value of property computedString from the JSON object
-    } else {
-        alert('There was a problem with the request.');
+  function alertContents3() {
+    try {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          // We retrieve a piece of text corresponding to some JSON
+        // now you have a nice object in the response, you can access its properties and values to populate the different fields of your form
+        // the next stages will be about the creation of this JSON from the PHP side, in relation to some data that we extracted from a database
+        alert(httpRequest.responseText); // If you have a bug, use an alert of what is given back from the server (for textual content)
+        // if you return something that cannot be converted to an object, then debug the PHP side !
+    //   var response = JSON.parse(httpRequest.responseText);
+      //  alert(response.arra); // display the value of property computedString from the JSON object
+      } else {
+          alert('There was a problem with the request.');
+        }
       }
     }
+    catch( e ) { // Always deal with what can happen badly, client-server applications --> there is always something that can go wrong on one end of the connection
+      alert('Caught Exception: ' + e.description);
+    }
   }
-  catch( e ) { // Always deal with what can happen badly, client-server applications --> there is always something that can go wrong on one end of the connection
-    alert('Caught Exception: ' + e.description);
-  }
-}
 
-makeRequest3();*/
-</script>
-<nav id="menu">
-  <ul>
-    <li class="active"><a href="index.html">Home</a></li>
-    <li><a href="About.html">How to Play</a></li>
-    <li id="game"><a href="Game.html">Play the Game</a></li>
-    <li><a href="Author.html">Authors</a></li>
-  </ul>
-</nav>
+  makeRequest3();*/
+  </script>
+  
+  <nav id="menu">
+    <ul>
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="About.html">How to Play</a></li>
+      <li id="game"><a href="Game.html">Play the Game</a></li>
+      <li><a href="Author.html">Authors</a></li>
+    </ul>
+  </nav>
 
+  <br><br><br>
 
-<br><br><br>
-
-<div id="info">
-<h1>Picross Mania</h1>
-<h3>by Troy Samra and Caleb Tenney</h3>
-<img id="duck"src="duck.jpg" alt="duck">
-<br><br>
-</div>
+  <div id="info">
+    <h1>Picross Mania</h1>
+    <h3>by Troy Samra and Caleb Tenney</h3>
+    <img id="duck"src="duck.jpg" alt="duck">
+    <br><br>
+  </div>
 
 
-<div id="Learn">
-<h1>Want to how to play Picross?</h1>
-<p>Picross can be challenging to learn and to play. If you want to get used to
-rules and learn how to play, feel free to check out our rules page</p>
-<button type="button" class="button" name="Learn"><a href="About.html">Click Here</a></button>
-<br><br>
-</div>
+  <div id="Learn">
+    <h1>Want to how to play Picross?</h1>
+    <p>
+      Picross can be challenging to learn and to play. If you want to get used to
+      rules and learn how to play, feel free to check out our rules page
+    </p>
+    <button type="button" class="button" name="Learn"><a href="About.html">Click Here</a></button>
+    <br><br>
+  </div>
 
-<div id="Play">
-<h1>Play the Game!</h1>
-<p>Ready to play? Think you know the rules? Good Luck and Have Fun!</p>
-<button type="button" class="button" name="Learn"><a href="Game.html">Click Here</a></button>
-<br><br>
-</div>
+  <div id="Play">
+    <h1>Play the Game!</h1>
+    <p>
+      Ready to play? Think you know the rules? Good Luck and Have Fun!
+    </p>
+    <button type="button" class="button" name="Learn"><a href="Game.html">Click Here</a></button>
+    <br><br>
+  </div>
 
-<div id="Authors">
-<h1>CSCI 130 Project Authors</h1>
-<p></p>
-<button type="button"  class="button" name="Learn"><a href="Author.html">Click Here</a></button>
-<br><br>
-</div>
-
-
+  <div id="Authors">
+    <h1>CSCI 130 Project Authors</h1>
+    <p>
+      
+    </p>
+    <button type="button"  class="button" name="Learn"><a href="Author.html">Click Here</a></button>
+    <br><br>
+  </div>
 </body>
 </html>

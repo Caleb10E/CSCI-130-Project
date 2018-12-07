@@ -1,69 +1,69 @@
 #menu ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    border-radius: 10px;
-    display: table;
-    text-align: center;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  border-radius: 10px;
+  display: table;
+  text-align: center;
 }
 
 #menu li {
-    display: inline-block;
-    float: none;
-    padding: 25px;
+  display: inline-block;
+  float: none;
+  padding: 25px;
 }
 
 #menu li:hover {
-    background-color: grey;
+  background-color: grey;
 }
 
 
 #menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 #menu .active {
-    background-color: green;
+  background-color: green;
 }
 
 #info {
   background-color: lightgrey;
   text-align: center;
   border-radius: 10px;
- font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
 
 #Learn {
   text-align: center;
   background-color: white;
-   font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
 
 #Game {
   text-align: center;
   border-radius: 10px;
-   font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
 
 #Play {
   text-align: center;
   border-radius: 10px;
   background-color: lightgrey;
-   font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
 
 #Authors {
   text-align: center;
-   font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
 
 .red {
@@ -130,17 +130,17 @@ a:active {
 }
 
 #parameters {
-background-color: lightgrey;
+  background-color: lightgrey;
 }
 
 p {
-   font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
 
 h1 {
-   font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
 
 h3 {
-   font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace
 }
