@@ -7,18 +7,15 @@ function createTable(tableSize, gridColor, blockColor) {
       but.setAttribute('type', 'button');
       but.setAttribute('name','javaSubmit');
       but.setAttribute('value','');
+      but.setAttribute('onclick', 'alertHello()');
       but.style.width = '50px';
       but.style.height = '50px';
-    //  but.addEventListener("click", alertHello()); // set onclick handler
         var y = x.insertCell(c);
         y.appendChild(but);
     //  y.innerHTML= r+ c;
     //  y.style.color = gridColor;
     }
-     but.onclick = WhichButton(event); // set onclick handler
   }
-  //  but.onclick = alertHello(); // set onclick handler
-//  document.getElementById('myTable').style.textAlign='center';
 }
 
 function alertHello() {
