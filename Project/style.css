@@ -144,3 +144,7 @@ h1 {
 h3 {
   font-family: "Courier New", Courier, monospace
 }
+
+#Game {
+  text-align: center;
+}
