@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Picross Game</title>
 </head>
@@ -51,9 +51,7 @@
     </script>
 
     <script src="script.js"></script>
-
     <table id="myTable" border="1"></table>
-
     <form id = "parameters">
       <fieldset>
         <p>Please select a table size</p>
@@ -63,16 +61,19 @@
         <input type="radio" name="gridColor" value="Red" checked>Red<br>
         <input type="radio" name="gridColor" value="Green">Green<br>
         <input type="radio" name="gridColor" value="Blue">Blue<br>
+        <input type="radio" name="gridColor" value="Yellow">Yellow<br>
+        <input type="radio" name="gridColor" value="Orange">Orange<br>
         <p>Please select a block color</p>
         <input type="radio" name="blockColor" value="Red" checked>Red<br>
         <input type="radio" name="blockColor" value="Green">Green<br>
         <input type="radio" name="blockColor" value="Blue">Blue<br>
+        <input type="radio" name="blockColor" value="Yellow">Yellow<br>
+        <input type="radio" name="blockColor" value="Orange">Orange<br>
         <br>
         <input type="button" class="button" onclick="createTable(tableSize, gridColor, blockColor); removeForm();" value="Create Table"><br>
         <br>
       </fieldset>
     </form>
-
     <script type="text/javascript">
       function removeForm() {
         var x = document.getElementById("parameters");

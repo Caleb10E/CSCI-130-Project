@@ -6,11 +6,15 @@ function createTable(tableSize, gridColor, blockColor) {
       but.setAttribute('type', 'button');
       but.setAttribute('name','javaSubmit');
       but.setAttribute('id','uniqueIdentifier');
-      but.setAttribute('value',' ');
+    //  alert(but.value);
+      but.setAttribute('value', 'c');
       but.setAttribute('onmousedown', 'WhichButton(event)');
       but.style.width = '50px';
       but.style.height = '50px';
       but.style.backgroundColor = blockColor.value;
+
+    //  var grid = document.getElementById('grid');
+    //  grid.style.color = gridColor.value;
         var y = x.insertCell(c);
         y.appendChild(but);
     }
@@ -19,11 +23,11 @@ function createTable(tableSize, gridColor, blockColor) {
 
 function WhichButton(event) {
   if(event.button == 0){
-  alert("You pressed button: " + event.button);
+//  alert("You pressed button: " + event.button);
   }
 
   else if(event.button == 2) {
-      alert("You pressed button: " + event.button);
+  //    alert("You pressed button: " + event.button);
     // make button an X
     var elem = document.getElementById("uniqueIdentifier");
     elem.value = "X";
