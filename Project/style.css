@@ -1,9 +1,9 @@
 p {
-  font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace;
 }
 
 h1 {
-  font-family: "Courier New", Courier, monospace
+  font-family: "Courier New", Courier, monospace;
 }
 
 h3 {
@@ -12,8 +12,8 @@ h3 {
 
 a {
   color: black;
+  font-family: "Courier New", courier, monospace;
 }
-
 
 a:link {
   text-decoration: none;
@@ -30,6 +30,11 @@ a:hover {
 
 a:active {
   text-decoration: none;
+}
+
+div {
+  margin: 0 auto;
+  width: 900px;
 }
 
 .About {
@@ -64,13 +69,13 @@ a:active {
 
 #menu ul {
   list-style-type: none;
-  margin: auto;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
   background-color: #333;
   position: fixed;
   top: 0px;
-  width: 100%;
+  width: 98%;
   border-radius: 10px;
   display: table;
   text-align: center;
@@ -92,7 +97,6 @@ a:active {
   color: white;
   text-align: center;
   text-decoration: none;
-  font-weight: bold;
 }
 
 #menu .active {
