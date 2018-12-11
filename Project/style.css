@@ -148,3 +148,7 @@ div {
 #parameters {
   background-color: lightgrey;
 }
+
+#myTable {
+  margin: 0 auto;
+}

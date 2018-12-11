@@ -18,7 +18,8 @@ function createTable(tableSize, gridColor, blockColor) {
     for (var j = 0; j < array.length; j++) {
       if ((i == j) || (i + j == 6)) {
         array[i][j] = 1;
-      } else {
+      }
+      else {
         array[i][j] = 0;
       }
     }
@@ -28,6 +29,7 @@ function createTable(tableSize, gridColor, blockColor) {
 
   for (var r = 0; r < parseInt(tableSize.value, 10); r++) {
     var x = document.getElementById('myTable').insertRow(r);
+    myTable.style.backgroundColor = gridColor.value;
     for (var c = 0; c < parseInt(tableSize.value, 10); c++) {
       //var num = (r + 1) * (c + 1);
       var but = document.createElement('input');
@@ -36,8 +38,8 @@ function createTable(tableSize, gridColor, blockColor) {
       but.setAttribute('id', 'num');
       but.setAttribute('value', '');
       but.setAttribute('onmousedown', 'WhichButton(event)');
-      but.style.width = '50px';
-      but.style.height = '50px';
+      but.style.width = '36px';
+      but.style.height = '36px';
       but.style.backgroundColor = blockColor.value;
       var y = x.insertCell(c);
       y.appendChild(but);
@@ -63,11 +65,13 @@ function WhichButton(event) {
       }
     }
     //alert("You pressed button: " + event.button);
-  } else if (event.button == 2) {
+  }
+  else if (event.button == 2) {
     //    alert("You pressed button: " + event.button);
     var elem = document.getElementById("num");
     elem.value = "X";
-  } else {
+  }
+  else {
     alert("Invalid Input");
   }
 }
