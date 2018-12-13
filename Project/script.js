@@ -8,6 +8,27 @@ function displayArray(array) {
 }
 
 function createTable(tableSize, gridColor, blockColor) {
+  var minutesLabel = document.getElementById("minutes");
+  var secondsLabel = document.getElementById("seconds");
+  var totalSeconds = 0;
+  setInterval(setTime, 1000);
+
+
+  function setTime() {
+    ++totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+  }
+
+  function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+      return "0" + valString;
+    } else {
+      return valString;
+    }
+  }
+  
   var size = parseInt(tableSize.value)
   var array = new Array(size);
   for (var i = 0; i < array.length; i++) {
@@ -25,7 +46,7 @@ function createTable(tableSize, gridColor, blockColor) {
     }
   }
 
-  //displayArray(array);
+  // displayArray(array);
 
   for (var r = 0; r < parseInt(tableSize.value, 10); r++) {
     var x = document.getElementById('myTable').insertRow(r);
@@ -60,18 +81,10 @@ function WhichButton(event) {
       var valString = val + "";
       if (valString.length < 2) {
         return "0" + valString;
-      } else {
+      }
+      else {
         return valString;
       }
     }
-    //alert("You pressed button: " + event.button);
-  }
-  else if (event.button == 2) {
-    //    alert("You pressed button: " + event.button);
-    var elem = document.getElementById("num");
-    elem.value = "X";
-  }
-  else {
-    alert("Invalid Input");
   }
 }
